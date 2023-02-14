@@ -11,6 +11,7 @@ module.exports = {
   theme: {
     extend: {
       colors:{
+        lightgray:'#F2F1F6',
         geekblue:{
           100:'#f0f5ff',
           200:'#d6e4ff',
