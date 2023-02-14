@@ -6,4 +6,5 @@ export { JobFunction } from './JobFunction/JobFunction';
 export { LandingPageBanner } from './LandingPageBanner/LandingPageBanner';
 export { LoginForm } from './LoginForm/LoginFrom';
 export { OnboardingQuestion } from './OnboardingQuestion/OnboardingQuestion';
+export { ProductInfo } from './ProductInfo/ProductInfo';
 export { WelcomeUser } from './WelcomeUser/WelcomeUser';
