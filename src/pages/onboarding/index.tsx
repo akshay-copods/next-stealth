@@ -1,9 +1,10 @@
-import { Header } from "@/components"
+import { Header, IntentSelection } from "@/components"
 
 const Onboarding = () => {
     return (
         <main className='flex flex-col h-screen'>
             <Header />
+            <IntentSelection />
             {/* <div className='flex flex-row-reverse h-full'> */}
             {/* <ImageBanner /> */}
             {/* <div className='flex flex-col px-24 flex-1 items-center justify-center'> */}
