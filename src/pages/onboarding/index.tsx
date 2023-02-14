@@ -1,4 +1,4 @@
-import { CompanyDetails, Header, ImageBanner } from "@/components"
+import { Header, ImageBanner } from "@/components"
 
 const Onboarding = () => {
     return (
@@ -8,7 +8,8 @@ const Onboarding = () => {
                 <ImageBanner />
                 <div className='flex flex-col px-24 flex-1 items-center justify-center'>
                     {/* <WelcomeUser /> */}
-                    <CompanyDetails />
+                    {/* <CompanyDetails /> */}
+                    {/* <JobFunction /> */}
                 </div>
             </div>
         </main>
