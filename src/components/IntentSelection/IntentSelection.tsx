@@ -4,7 +4,7 @@ import { AddPeople, Battery } from "../Icons"
 import { IntentCard } from "../IntentCard/IntentCard"
 import { OnboardingQuestion } from "../OnboardingQuestion/OnboardingQuestion"
 
-export const IntentSelection = () => {
+export const IntentSelection = ({ changePage }: { changePage: (e: number) => void }) => {
     const [ticked, setTicked] = useState('add')
     return (
         <div className="flex flex-col gap-14 px-40 pt-8">
@@ -17,7 +17,7 @@ export const IntentSelection = () => {
                 </div>
             </div>
             <div className="flex justify-end sticky bottom-0">
-                <Button type="primary" className="mr-32 bg-geekblue-600">Continue</Button>
+                <Button onClick={() => changePage(4)} type="primary" className="mr-32 bg-geekblue-600">Continue</Button>
             </div>
         </div>
 

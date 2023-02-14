@@ -1,7 +1,7 @@
 import { Button, Input } from "antd"
 import { OnboardingQuestion } from "../OnboardingQuestion/OnboardingQuestion"
 
-export const CompanyDetails = () => {
+export const CompanyDetails = ({ changePage }: { changePage: (e: number) => void }) => {
     return (
         <div className='flex w-[44rem] flex-col gap-24'>
             <OnboardingQuestion question='Enter your company name and URL' subHeading='With your company details help us understand your company and create a customized experience for you. ' />
@@ -11,7 +11,7 @@ export const CompanyDetails = () => {
                 </div>
                 <Input className='rounded-sm' placeholder="your organization URL" />
             </div>
-            <Button type='primary' className='bg-geekblue-600 self-end rounded-sm'>Continue</Button>
+            <Button onClick={() => changePage(2)} type='primary' className='bg-geekblue-600 self-end rounded-sm'>Continue</Button>
         </div>
     )
 }

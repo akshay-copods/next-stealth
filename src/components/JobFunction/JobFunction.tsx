@@ -8,7 +8,7 @@ const options = [
     { value: 'disabled', label: 'Disabled', disabled: true },
 ]
 
-export const JobFunction = ({ setPage }: { setPage?: (e: number) => void }) => {
+export const JobFunction = ({ changePage }: { changePage: (e: number) => void }) => {
     return <div className='flex flex-col gap-20 w-[44rem]'>
         <OnboardingQuestion question='What best describes your job function?' subHeading='This will help us personalize your experience with StealthSaaS' />
         <div className='flex flex-col gap-24'>
@@ -18,7 +18,7 @@ export const JobFunction = ({ setPage }: { setPage?: (e: number) => void }) => {
                 className='w-full'
                 options={options}
             />
-            <Button disabled className='bg-geekblue-600 self-end rounded-sm' type='primary'>Continue</Button>
+            <Button onClick={() => changePage(3)} className='bg-geekblue-600 self-end rounded-sm' type='primary'>Continue</Button>
         </div>
     </div>
 }
