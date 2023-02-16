@@ -1,10 +1,11 @@
+import { QuestionType } from "@/types/question"
 import { Button, Input } from "antd"
 import { OnboardingQuestion } from "../OnboardingQuestion/OnboardingQuestion"
 
-export const CompanyDetails = ({ changePage }: { changePage: (e: number) => void }) => {
+export const CompanyDetails = ({ question, changePage }: { question: QuestionType | undefined, changePage: (e: number) => void }) => {
     return (
         <div className='flex w-[44rem] flex-col gap-24'>
-            <OnboardingQuestion question='Enter your company name and URL' subHeading='With your company details help us understand your company and create a customized experience for you. ' />
+            <OnboardingQuestion question={question?.question} subHeading={question?.subheading} />
             <div className='flex flex-col gap-14'>
                 <div>
                     <Input className='rounded-sm' addonBefore="http://" placeholder="your organization URL" />
