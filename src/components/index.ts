@@ -6,6 +6,7 @@ export { IntentCard } from './IntentCard/IntentCard';
 export { IntentSelection } from './IntentSelection/IntentSelection';
 export { JobFunction } from './JobFunction/JobFunction';
 export { LandingPageBanner } from './LandingPageBanner/LandingPageBanner';
+export { LaunchingSoonChip } from './LaunchingSoonChip/LaunchingSoonChip';
 export { LoginForm } from './LoginForm/LoginFrom';
 export { OnboardingQuestion } from './OnboardingQuestion/OnboardingQuestion';
 export { ProductInfo } from './ProductInfo/ProductInfo';

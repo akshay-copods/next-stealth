@@ -1,12 +1,12 @@
 import { QuestionType } from "@/types/question"
 import { Button, Input, Select } from "antd"
+import { LaunchingSoonChip } from "../LaunchingSoonChip/LaunchingSoonChip"
 import { OnboardingQuestion } from "../OnboardingQuestion/OnboardingQuestion"
 const options = [{}]
 export const ProductInfo = ({ productOption, question }: { productOption?: any, question?: QuestionType | undefined }) => {
     const { Option } = Select;
     const liveProducts = productOption.filter((item: any) => !item.disabled)
     const launchingSoonProducts = productOption.filter((item: any) => item.disabled)
-    console.log(liveProducts)
     return (
         <div className='flex flex-col gap-20 w-[44rem]'>
             <OnboardingQuestion question={question?.question} />
@@ -18,7 +18,7 @@ export const ProductInfo = ({ productOption, question }: { productOption?: any, 
                     defaultValue={liveProducts[0].label}
                 >
                     {liveProducts.map((item: any) => <Option key={item.id} >{item.label}</Option>)}
-                    <Option className='pointer-events-none'>Launching Soon</Option>
+                    <Option className='pointer-events-none'><LaunchingSoonChip /></Option>
                     {launchingSoonProducts.map((item: any) => <Option key={item.id} disabled={item.disabled}>{item.label}</Option>)}
                 </Select>
                 <Input size="large" placeholder="Enter a product name" />
